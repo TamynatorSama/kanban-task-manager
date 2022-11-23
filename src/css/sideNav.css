@@ -163,7 +163,7 @@ aside p{
     aside{
         bottom: 0%;
         min-height: 90%;
-        position: fixed;
+        position: absolute;
         box-shadow: none;
         transition: all 0.2s ease;
         clip-path: circle(0% at 50% -50%);
