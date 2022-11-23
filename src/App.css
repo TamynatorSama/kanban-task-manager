@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+section{
   min-height: 100vh;
+  height: fit-content;
+  background-color: var(--main--color);
+}
+.board--class{
   display: flex;
+  gap: 1em;
+  padding: 1.5em;
+  height: 89vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: scroll;
+  -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.board--class::-webkit-scrollbar{
+  display: none;
+}
+.column{
+  height: fit-content;
+  min-width: 20em;
+  display: flex;
+  gap: 1em;
+  height: 100%;
   flex-direction: column;
+}
+.column--header{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 1.5em;
+}
+.column--header p{
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sub--text);
+}
+.column .color{
+  width: 10px;
+  height: 10px;
+  border-radius: 2em;
+  margin-right: 0.5em;
+  background: var(--col);
+  /* rgb(0, 177, 216) */
+}
+.add{
+  height: 100%;
+  display: grid;
+  color: rgb(165, 165, 165);
+  place-items: center;
+}
+.add h1{
+ cursor: pointer;
+}
+.tasks{
+  width: 100%;
+  padding: 1.1em 1em;
+  border-radius: 10px;
+  background: var(--nav--color);
+  color: var(--big-text);
+  font-weight: 500;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.086),
+  0px 0px 1px 1px #645fc71e;
+}
+.tasks p:last-child{
+  font-size:0.9em;
+  color: var(--sub--text);
+  margin-top: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

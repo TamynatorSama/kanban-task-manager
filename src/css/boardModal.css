@@ -1,0 +1,180 @@
+.board-modal{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    color: var(--big-text);
+    background: rgba(0, 0, 0, 0.407);
+    backdrop-filter: blur(0.2em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header svg{
+    width: 20px;
+    cursor: pointer;
+    
+}
+.modal--content{
+    padding: 1.5em;
+    border-radius: 8px;
+    background: var(--main--color);
+    width: 90%;
+    max-width: 25em;
+}
+.bb{
+    height: 10em;
+}
+.modal--content h1{
+    font-size: clamp(1em,2vw,1.4em);
+}
+.modal--content h1.special{
+    font-weight: 500;
+    line-height: 1.3em;
+    font-size: clamp(1em,1.7vw,1.5em);
+}
+.details{
+    margin-top: 1.3em;
+    font-size: clamp(0.7em,2vw,0.9em);
+    color: rgb(136, 136, 136);
+    font-weight: 500;
+    line-height: 1.1em;
+    text-overflow: clip;
+    word-wrap: break-word;
+}
+.input--holder{
+    margin-top: 1em;
+}
+.input--holder p{
+    font-size: 0.8em;
+    margin-bottom: 0.7em;
+    font-weight: 500;
+}
+.input--holder input{
+    background: transparent;
+    outline: none;
+    color: var(--big-text);
+    border: 1px solid grey;
+    width: 100%;
+    padding: 0.7em;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.modal--content button{
+    margin-top: 1em;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    background: var(--btn--color);
+    padding: 0.7em;
+    color: white;
+    font-weight: 600;
+}
+.error{
+    color: rgb(255, 49, 49);
+    font-size: 15px;
+    margin-top: 5px;
+}
+.subtasks--section{
+    margin-top: 1.5em;
+}
+.subtasks--section h5{
+    font-weight: 500;
+    font-size: clamp(0.7em,1vw,0.9em);
+    word-spacing: -0.1em;
+}
+.sub--content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    gap: 1em;
+}
+.sub--class{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: var(--sub-holder);
+    font-size: clamp(0.7em,1.2vw,0.8em);
+    padding: 1em;
+    font-weight: 500;
+    border-radius: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sub--class p{
+    color: white;
+}
+.sub--class input{
+    display: none;
+}
+.sub--class label{
+    width: 1.4em;
+    cursor: pointer;
+    height: 1.3em;
+    background: var(--nav--color);
+    margin-right: 1.3em;
+    position: relative;
+}
+.sub--class label p{
+    display: none;
+    color: white;
+    text-align: center;
+}
+.sub--class :checked ~ label{
+    background: var(--btn--color);
+}
+.sub--class :checked ~ label p{
+    display: block;
+}
+.sub--class :checked ~ .real{
+    text-decoration: line-through;
+    color: var(--special-pcolor);
+}
+header > input{
+    display: none;
+}
+.more{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1em 0.5em;
+    right: 0;
+    gap: 0.8em;
+    width: 40%;
+    top: 120%;
+    background: var(--nav--color); 
+    border-radius: 5px;
+    transition: all 0.3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    clip-path: circle(0% at 50% -50%);
+}
+header :checked ~ .more{
+    clip-path: circle(100% at 50% 20%);
+}
+.more p{
+    display: flex;
+    gap: 0.5em;
+    font-weight: 500;
+    cursor: pointer;
+}
+.more p span{
+    display: grid;
+    place-items: center;
+}
+.more p span svg{
+    width: 16px;
+}
+.more p:last-child{
+    color: rgb(255, 67, 67);
+}
+.more p:last-child span svg{
+    stroke: rgb(255, 67, 67);
+}
