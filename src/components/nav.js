@@ -17,6 +17,9 @@ const Nav = (props) => {
         props.hideNavRef.current.style.display = "flex"
     }
     const handleDelete = ()=>{
+        if(presentIndex === 0)
+            return
+            
         dispatch(deleteBoard(presentIndex))
         dispatch(deleteBoardColumn(presentIndex))
         dispatch(deleteBoardTask(presentIndex))
