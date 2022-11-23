@@ -161,8 +161,8 @@ aside p{
 }
 @media screen and (max-width : 500px) {
     aside{
-        top: 10%;
-        min-height: 90vh;
+        bottom: 0%;
+        min-height: 90%;
         position: fixed;
         box-shadow: none;
         transition: all 0.2s ease;
